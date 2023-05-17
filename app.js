@@ -17,7 +17,7 @@ function errorHandler(error) {
 }
 
 function clickHandler() {
-	var inputText = txtInput.ariaValueMax;
+	var inputText = txtInput.value;
 
 	fetch(getTranslationURL(inputText))
 		.then((response) => response.json())
