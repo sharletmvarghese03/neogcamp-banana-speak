@@ -11,6 +11,7 @@ function getTranslationURL(text) {
 
 function errorHandler(error) {
 	console.log('error occured', error);
+	alert('something wrong with server! try after sometime');
 }
 
 function clickHandler() {
@@ -18,7 +19,7 @@ function clickHandler() {
 
 	fetch(getTranslationURL(inputText))
 		.then((response) => response.json())
-		.then((json) => log(json.contents.translated))
+		.then((json) => console.log(json.contents.translated))
 		.catch(errorHandler);
 }
 
